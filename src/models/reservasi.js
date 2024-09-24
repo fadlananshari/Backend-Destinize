@@ -21,7 +21,7 @@ const createNewReservasiByIdPaket = (id_user, id_paket, body) => {
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
-  const values = [id_user, id_paket, body.tujuan, 0, body.penginapan, body.transportasi, body.makanan, body.nama, body.no_telp, body.jml_peserta, body.waktu_perjalanan, body.harga, body.jml_tagihan, new Date(), new Date()];
+  const values = [id_user, id_paket, body.tujuan, false, body.penginapan, body.transportasi, body.makanan, body.nama, body.no_telp, body.jml_peserta, body.waktu_perjalanan, body.harga, body.jml_tagihan, new Date(), new Date()];
 
   return dbPool.execute(SQLQuery, values);
 };
