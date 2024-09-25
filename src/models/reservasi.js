@@ -18,7 +18,7 @@ const getReservasiByIdUser = (id_user) => {
 const createNewReservasiByIdPaket = (id_user, id_paket, body) => {
   const SQLQuery = `
     INSERT INTO reservasi (id_user, id_paket, tujuan, sudah_bayar, penginapan, transportasi, makanan, nama, no_telp, jml_peserta, waktu_perjalanan, harga, jml_tagihan, created_at, updated_at) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `;
 
   const values = [id_user, id_paket, body.tujuan, false, body.penginapan, body.transportasi, body.makanan, body.nama, body.no_telp, body.jml_peserta, body.waktu_perjalanan, body.harga, body.jml_tagihan, new Date(), new Date()];
