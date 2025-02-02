@@ -2,10 +2,10 @@ require('dotenv').config();
 const PORT = process.env.PORT || 5000;
 const express = require('express');
 
-const Routes = require('./routes/index');
+const Routes = require('./src/routes/index');
 
-const middlewareLogRequest = require('./middleware/logs');
-const upload = require('./middleware/multer');
+const middlewareLogRequest = require('./src/middleware/logs');
+const upload = require('./src/middleware/multer');
 const cors = require('cors');
 const bodyParser = require('body-parser')
 
